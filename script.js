@@ -32,14 +32,14 @@ if (medicalSelect && otherMedicalInput) {
 
 }
 
-    // ================= PHONE FORMAT =================
+   
     if (phoneInput) {
         phoneInput.addEventListener("input", function () {
             this.value = this.value.replace(/\D/g, "").substring(0, 10);
         });
     }
 
-    // ================= GENERATE QR =================
+   
     if (generateBtn) {
 
         generateBtn.addEventListener("click", function () {
@@ -65,8 +65,8 @@ if (medicalSelect && otherMedicalInput) {
                 return;
             }
 
-            // -------- CREATE QR URL --------
-            let baseURL = window.location.origin + "/view.html";
+         
+            let baseURL = "https://paruchuruvyshnavi.github.io/emergency_qr/view.html";
 
             let qrURL = baseURL +
                 `?name=${encodeURIComponent(name)}` +
@@ -83,7 +83,7 @@ if (medicalSelect && otherMedicalInput) {
                 height: 220
             });
 
-            // ================= DOWNLOAD QR =================
+          
             let downloadBtn = document.getElementById("downloadQR");
             if (downloadBtn) {
                 downloadBtn.style.display = "block";
@@ -99,7 +99,7 @@ if (medicalSelect && otherMedicalInput) {
                 };
             }
 
-            // ================= PRINT QR =================
+
             let printBtn = document.getElementById("printQR");
             if (printBtn) {
                 printBtn.style.display = "block";
@@ -128,7 +128,7 @@ if (medicalSelect && otherMedicalInput) {
         });
     }
 
-    // ================= FIND HOSPITAL =================
+   
     if (hospitalBtn) {
 
         hospitalBtn.addEventListener("click", function () {
