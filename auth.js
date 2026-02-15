@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-// LOGIN
+
 const loginBtn = document.getElementById("loginBtn");
 if(loginBtn){
 loginBtn.addEventListener("click", function(){
@@ -20,7 +20,7 @@ window.location = "index.html";
 });
 }
 
-// SIGNUP
+
 const signupBtn = document.getElementById("signupBtn");
 if(signupBtn){
 signupBtn.addEventListener("click", function(){
@@ -42,7 +42,7 @@ window.location = "login.html";
 });
 }
 
-// LOGOUT
+
 const logoutBtn = document.getElementById("logoutBtn");
 if(logoutBtn){
 logoutBtn.addEventListener("click", function(){
@@ -51,7 +51,7 @@ window.location = "login.html";
 });
 }
 
-// PROTECT INDEX PAGE
+
 if(window.location.pathname.includes("index.html")){
 if(localStorage.getItem("loggedIn") !== "true"){
 window.location = "login.html";
