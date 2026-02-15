@@ -88,12 +88,12 @@ document.getElementById("blood").innerText = "Blood Group: " + blood;
 document.getElementById("phone").innerText = "Phone: " + phone;
 document.getElementById("address").innerText = "Address: " + address;
 
-// CALL BUTTON
+
 document.getElementById("callBtn").onclick = function(){
     window.location.href = "tel:" + phone;
 };
 
-// SMS BUTTON
+
 document.getElementById("smsBtn").onclick = function(){
     let message = "Emergency Alert for " + name +
     ". Blood Group: " + blood;
@@ -101,7 +101,7 @@ document.getElementById("smsBtn").onclick = function(){
     "sms:" + phone + "?body=" + encodeURIComponent(message);
 };
 
-// HOSPITAL SEARCH
+
 document.getElementById("hospitalBtn").onclick = function(){
 
     if(navigator.geolocation){
