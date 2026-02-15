@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emergency QR Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🚨 Emergency QR Generator</h1>
+
+<p class="warning">
+⚠ Important: Please print and carry this QR card for emergency use.
+</p>
+
+<button id="logoutBtn">Logout</button>
+<button id="toggleThemeBtn">🌙 Toggle Theme</button>
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="text" id="blood" placeholder="Blood Group (A+, O-)" maxlength="3">
+<small id="bloodError" class="error"></small>
+
+<input type="text" id="phone" placeholder="Primary Contact" maxlength="10">
+<small id="phoneError" class="error"></small>
+
+<input type="text" id="phone2" placeholder="Second Contact (Optional)"
+maxlength="12">
+<small id="phone2Error" class="error"></small>
+
+<input type="text" id="address" placeholder="Address">
+
+<select id="medical" multiple>
+<option value="Diabetes">Diabetes</option>
+<option value="High Blood Pressure">High Blood Pressure</option>
+<option value="Asthma">Asthma</option>
+<option value="Heart Disease">Heart Disease</option>
+<option value="Epilepsy">Epilepsy</option>
+<option value="Allergy">Allergy</option>
+<option value="Other">Other</option>
+</select>
+
+<input type="text" id="otherMedical"
+placeholder="Enter Other Condition"
+style="display:none;">
+
+<button id="generateBtn">Generate QR</button>
+
+<div id="qrcode"></div>
+
+<button id="downloadQR" style="display:none;">Download QR</button>
+<button id="printQR" style="display:none;">Print QR</button>
+
+
+</div>
+
+<script src="qrcode.min.js"></script>
+<script src="jspdf.min.js"></script>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
