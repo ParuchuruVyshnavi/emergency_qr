@@ -49,7 +49,7 @@ if (medicalSelect && otherMedicalInput) {
             let phone = phoneInput.value.trim();
             let address = document.getElementById("address").value.trim();
 
-            // -------- VALIDATION --------
+           
             if (!name) {
                 alert("Enter Name");
                 return;
